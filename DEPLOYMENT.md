@@ -4,8 +4,8 @@
 
 ### Web Service
 - **Name**: blood-cancer-detection
-- **Environment**: Python 3.11.7
-- **Build Command**: `pip install -r requirements.txt`
+- **Environment**: Python 3.9.18
+- **Build Command**: `pip install --upgrade pip && pip install -r requirements.txt`
 - **Start Command**: `python start.py`
 - **Health Check Path**: `/`
 
@@ -28,19 +28,19 @@ TF_CPP_MIN_LOG_LEVEL=2
 ## Deployment Steps
 
 1. Connect GitHub repository to Render
-2. Create Web Service with Python 3.11.7 environment
+2. Create Web Service with Python 3.9.18 environment
 3. Set environment variables
 4. Deploy - Render will automatically detect the Procfile
 5. Test the deployed application
 
 ## Important Notes
 
-- Uses Python 3.11.7 for maximum compatibility
-- TensorFlow 2.13.x with CPU-only support
+- Uses Python 3.9.18 for maximum stability
+- TensorFlow 2.10.1 with CPU-only support
+- Pillow 9.5.0 (stable version with pre-compiled wheels)
 - Includes fallback handling for TensorFlow import issues
 - Uses custom start.py script for better error handling
-- All dependencies use version ranges for flexibility
-- Pillow 10.x for Python 3.11 compatibility
+- All dependencies use exact versions for reliability
 
 ## Troubleshooting
 
@@ -50,6 +50,14 @@ If TensorFlow fails to install:
 3. TensorFlow CPU-only version is used for Render compatibility
 
 If Pillow fails to install:
-1. Python 3.11.7 is used for better Pillow compatibility
-2. Pillow 10.x supports Python 3.11
-3. Version ranges allow for compatible updates
+1. Python 3.9.18 is used for better Pillow compatibility
+2. Pillow 9.5.0 has pre-compiled wheels available
+3. Exact versions prevent build conflicts
+
+## Package Versions (Stable)
+- Python: 3.9.18
+- Flask: 2.2.5
+- TensorFlow: 2.10.1
+- Pillow: 9.5.0
+- NumPy: 1.21.6
+- All other packages: Stable versions compatible with Python 3.9
