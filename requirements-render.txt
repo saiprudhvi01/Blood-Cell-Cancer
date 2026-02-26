@@ -5,7 +5,7 @@ numpy==1.23.5
 flask-sqlalchemy==3.0.5
 flask-login==0.6.2
 flask-wtf==1.1.1
-werkzeug==2.3.7
+werkzeug==3.1.6
 matplotlib==3.7.1
 scikit-learn==1.2.2
 flask-cors==4.0.0
