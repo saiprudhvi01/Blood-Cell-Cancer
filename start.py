@@ -11,7 +11,7 @@ try:
 except ImportError as e:
     print(f"TensorFlow import error: {e}")
     print("Attempting to install compatible TensorFlow version...")
-    os.system(f"{sys.executable} -m pip install 'tensorflow>=2.15.0'")
+    os.system(f"{sys.executable} -m pip install tensorflow")
     import tensorflow as tf
 
 # Import and run the Flask app
